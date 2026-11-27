@@ -1,0 +1,7 @@
+# Fichiers de travail vidéo (voix brute, reportage TV source, essais) : non publiés
+video/*
+!video/script-presentation.md
+!video/script-court.txt
+!video/GUIDE-ENREGISTREMENT.md
+.DS_Store
+Thumbs.db

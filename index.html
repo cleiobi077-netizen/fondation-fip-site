@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fondation pour les Initiatives Populaires</title>
+  <meta name="description" content="La Fondation pour les Initiatives Populaires (FIP) accompagne, finance et met en réseau les entrepreneurs gabonais : TPE, PME et PMI. Pour une économie plus gabonaise.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo-officiel.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/logo-officiel.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js','is-loading');</script>
+</head>
+<body>
+  <!-- ============ ÉCRAN DE CHARGEMENT ============ -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Chargement du site de la FIP">
+    <div class="preloader__grid" aria-hidden="true"></div>
+    <div class="preloader__stage" aria-hidden="true">
+      <svg class="preloader__rings" viewBox="0 0 240 240">
+        <circle class="r r--green" cx="120" cy="120" r="112"/>
+        <circle class="r r--yellow" cx="120" cy="120" r="100"/>
+        <circle class="r r--blue" cx="120" cy="120" r="88"/>
+      </svg>
+      <span class="preloader__orbit"><i></i><i></i><i></i></span>
+      <img class="preloader__logo" src="assets/logo-officiel.jpg" alt="" width="150" height="150">
+    </div>
+    <p class="preloader__name" aria-hidden="true"><span>Fondation pour les</span> <b>Initiatives Populaires</b></p>
+    <div class="preloader__foot">
+      <span class="mono preloader__slogan">Pour une économie plus gabonaise</span>
+      <span class="mono preloader__pct" id="preloader-pct">0%</span>
+    </div>
+    <div class="preloader__bar" aria-hidden="true"><span id="preloader-bar"></span></div>
+  </div>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="brand" aria-label="FIP, retour en haut">
+        <img src="assets/logo-officiel.jpg" alt="" width="34" height="34">
+        <span class="brand__name">FIP<span class="brand__sub">Fondation pour les Initiatives Populaires</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#realisations">Nos actions</a>
+        <a href="#video">Le mot du Directeur</a>
+        <a href="#mission">Mission</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="#eligibilite" class="btn btn--ghost btn--sm">Suis-je éligible ?</a>
+        <a href="#contact" class="btn btn--light btn--sm">Soumettre un projet</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#realisations">Nos actions</a>
+      <a href="#video">Le mot du Directeur</a>
+      <a href="#mission">Mission</a>
+      <a href="#objectifs">Objectifs</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#eligibilite">Suis-je éligible ?</a>
+      <a href="#contact" class="btn btn--light">Soumettre un projet</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__photo" aria-hidden="true">
+        <img src="assets/galerie/equipe-portrait.jpg" alt="" width="1080" height="720" fetchpriority="high">
+      </div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <canvas class="hero__canvas" id="constellation" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <a href="#realisations" class="pill reveal">
+          <span class="pill__dot"></span>
+          Lancée officiellement le 18 juillet 2022 · Libreville
+          <span class="pill__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Pour</span> <span class="word">une</span> <span class="word">économie</span></span>
+          <span class="line"><span class="word gradient-text">plus gabonaise.</span></span>
+        </h1>
+
+        <p class="hero__lead reveal">
+          La Fondation pour les Initiatives Populaires accompagne les porteurs de projets,
+          les <strong>TPE</strong>, <strong>PME</strong> et <strong>PMI</strong> du Gabon&nbsp;:
+          un accès plus juste au financement, un accompagnement de terrain
+          et un réseau d'entrepreneurs qui pèse.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--light">Soumettre mon initiative <span aria-hidden="true">→</span></a>
+          <a href="#video" class="btn btn--ghost"><span class="play-ico" aria-hidden="true"></span> Voir le message du Directeur</a>
+        </div>
+
+        <!-- Carte « pipeline » façon tableau de déploiement -->
+        <div class="pipeline reveal" aria-label="Le parcours d'une initiative accompagnée par la FIP">
+          <div class="pipeline__head">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mono">initiative / boulangerie-artisanale-owendo</span>
+            <span class="status" id="pipe-status"><i></i><span>En cours</span></span>
+          </div>
+          <ol class="pipeline__steps" id="pipeline">
+            <li data-step="0"><span class="tick"></span><div><b>Idée déposée</b><small>Porteur de projet · Estuaire</small></div><span class="mono t">0:00</span></li>
+            <li data-step="1"><span class="tick"></span><div><b>Diagnostic &amp; accompagnement</b><small>Plan d'affaires, formalisation</small></div><span class="mono t">—</span></li>
+            <li data-step="2"><span class="tick"></span><div><b>Solution de financement</b><small>Juste, équitable, adaptée</small></div><span class="mono t">—</span></li>
+            <li data-step="3"><span class="tick"></span><div><b>Entrée dans le réseau FIP</b><small>Mise en relation, plaidoyer</small></div><span class="mono t">—</span></li>
+          </ol>
+          <div class="pipeline__bar"><span id="pipe-bar"></span></div>
+          <p class="pipeline__note mono">Exemple illustratif du parcours type</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDE DÉFILANTE ============ -->
+    <section class="marquee" aria-label="Les publics et filières que la FIP soutient">
+      <div class="marquee__track">
+        <ul>
+          <li>Très Petites Entreprises</li><li class="sep">✦</li>
+          <li>Petites et Moyennes Entreprises</li><li class="sep">✦</li>
+          <li>Petites et Moyennes Industries</li><li class="sep">✦</li>
+          <li>Porteurs d'idées</li><li class="sep">✦</li>
+          <li>Femmes entrepreneures</li><li class="sep">✦</li>
+          <li>Jeunes diplômés</li><li class="sep">✦</li>
+          <li>Artisans</li><li class="sep">✦</li>
+          <li>Agriculteurs</li><li class="sep">✦</li>
+          <li>Commerçants</li><li class="sep">✦</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Très Petites Entreprises</li><li class="sep">✦</li>
+          <li>Petites et Moyennes Entreprises</li><li class="sep">✦</li>
+          <li>Petites et Moyennes Industries</li><li class="sep">✦</li>
+          <li>Porteurs d'idées</li><li class="sep">✦</li>
+          <li>Femmes entrepreneures</li><li class="sep">✦</li>
+          <li>Jeunes diplômés</li><li class="sep">✦</li>
+          <li>Artisans</li><li class="sep">✦</li>
+          <li>Agriculteurs</li><li class="sep">✦</li>
+          <li>Commerçants</li><li class="sep">✦</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RÉALISATIONS ============ -->
+    <section class="section actions" id="realisations">
+      <div class="actions__bg" aria-hidden="true">
+        <img src="assets/galerie/equipe-reunion.jpg" alt="" width="1080" height="720" loading="lazy" id="actions-bg">
+      </div>
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow mono">01 — Nos actions</span>
+          <h2>Ce que la FIP<br><span class="muted">a déjà construit.</span></h2>
+          <p class="section__lead">Lancement, concours national, rencontres&nbsp;: les actions menées depuis 2022 pour faire grandir l'entrepreneuriat gabonais.</p>
+        </header>
+
+        <ol class="timeline" id="timeline">
+          <li class="timeline__progress" aria-hidden="true"><span id="tl-progress"><i></i></span></li>
+          <li class="tl reveal">
+            <time class="mono" datetime="2022-07-18">18 juillet 2022</time>
+            <div class="tl__card spot">
+              <h3>Lancement officiel de la FIP</h3>
+              <p>La Fondation pour les Initiatives Populaires est présentée au public avec un objectif clair : soutenir la dynamique de développement de l'entrepreneuriat gabonais.</p>
+              <span class="tl__src mono">Source : L'Union, repris par Direct Infos Gabon</span>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <time class="mono" datetime="2022-07">Juillet 2022</time>
+            <div class="tl__card spot">
+              <h3>Un accueil favorable des pouvoirs publics</h3>
+              <p>Le cabinet du ministère du Commerce et des PME salue le projet&nbsp;: «&nbsp;Cette initiative procède d'une approche innovante qui mérite une attention particulière.&nbsp;»</p>
+              <span class="tl__src mono">Eric Lembe Moussinga, directeur de cabinet</span>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <time class="mono" datetime="2022">Depuis 2022</time>
+            <div class="tl__card spot">
+              <h3>Une communauté qui grandit</h3>
+              <p>Plus de 447 personnes suivent les actions de la Fondation sur sa page officielle, depuis Libreville et partout au Gabon.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <time class="mono">Programme phare</time>
+            <div class="tl__card spot">
+              <h3>Le Concours National des Initiatives Populaires</h3>
+              <p>Un concours ouvert à tout le Gabon pour révéler les porteurs de projets, avec l'application <b>Rise Up Gabon</b>.</p>
+              <a href="#concours" class="link">Découvrir le concours →</a>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <time class="mono" datetime="2025-08-26">Août 2025</time>
+            <div class="tl__card spot tl__card--memory tl__card--media">
+              <img src="assets/hommage-mayala.jpg" alt="Portrait de Monsieur Da Sylva Mayala" width="120" height="120" loading="lazy">
+              <div>
+                <h3>Hommage à Monsieur Da Sylva Mayala</h3>
+                <p>La Fondation salue la mémoire de l'un de ses membres fondateurs. Son engagement continue d'inspirer notre action.</p>
+              </div>
+            </div>
+          </li>
+          <li class="tl tl--next reveal">
+            <time class="mono">À venir</time>
+            <div class="tl__card tl__card--dashed">
+              <h3>Votre initiative, demain&nbsp;?</h3>
+              <p>Les prochaines réussites de cette frise seront celles des entrepreneurs accompagnés par la FIP.</p>
+              <a href="#contact" class="link">Présenter mon projet →</a>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Concours National des Initiatives Populaires -->
+        <article class="feature reveal" id="concours">
+          <div class="feature__media spot">
+            <img src="assets/concours-national.jpg" alt="Affiche du Concours National des Initiatives Populaires : une idée, un projet, une entreprise, un leader sectoriel. Rise Up Gabon." width="1080" height="1080" loading="lazy">
+          </div>
+          <div class="feature__body">
+            <span class="tag tag--green mono">Concours national</span>
+            <h3>Concours National des Initiatives Populaires</h3>
+            <ol class="chain" aria-label="Le chemin proposé par le concours">
+              <li>Une idée</li><li>Un projet</li><li>Une entreprise</li><li>Un leader sectoriel</li>
+            </ol>
+            <p>La FIP part à la recherche des initiatives qui feront l'économie gabonaise de demain. Le concours accompagne les candidats de l'idée jusqu'à l'entreprise, avec un mot d'ordre&nbsp;: <b>Rise Up Gabon</b>.</p>
+            <p>Les candidatures passent par l'application <b>Rise Up Gabon</b>, disponible sur Google Play.</p>
+            <div class="feature__actions">
+              <a href="https://play.google.com/store/search?q=Rise%20Up%20Gabon&c=apps" class="btn btn--light" target="_blank" rel="noopener">Trouver l'appli Rise Up Gabon →</a>
+              <a href="#contact" class="btn btn--ghost">Poser une question</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ GALERIE ============ -->
+    <section class="section section--alt" id="galerie">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow mono">02 — En images</span>
+          <h2>La FIP sur le terrain.</h2>
+          <p class="section__lead">Rencontres, sessions d'accompagnement, événements&nbsp;: retrouvez les moments forts de la Fondation.</p>
+        </header>
+        <!--
+          ▶ POUR AJOUTER UNE PHOTO : déposez-la dans assets/galerie/ puis copiez un bloc <li class="slide"> ci-dessous.
+            Les points et le compteur se mettent à jour tout seuls.
+        -->
+        <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carrousel" aria-label="Photos de la FIP sur le terrain" tabindex="0">
+          <ul class="carousel__track" id="car-track">
+            <li class="slide" aria-roledescription="diapositive">
+              <figure>
+                <img src="assets/galerie/equipe-portrait.jpg" alt="L'équipe de la Fondation pour les Initiatives Populaires réunie dans ses locaux" width="1080" height="720" loading="lazy" draggable="false">
+                <figcaption><b>L'équipe FIP</b><span>Les femmes et les hommes qui portent la Fondation au quotidien.</span></figcaption>
+              </figure>
+            </li>
+            <li class="slide" aria-roledescription="diapositive">
+              <figure>
+                <img src="assets/galerie/equipe-reunion.jpg" alt="Membres de la FIP se tenant la main autour d'une table de réunion" width="1080" height="720" loading="lazy" draggable="false">
+                <figcaption><b>Unis autour de la table</b><span>Réunion de travail : une seule chaîne, un même objectif.</span></figcaption>
+              </figure>
+            </li>
+            <li class="slide slide--contain" aria-roledescription="diapositive">
+              <figure style="--bg: url('assets/concours-national.jpg')">
+                <img src="assets/concours-national.jpg" alt="Affiche du Concours National des Initiatives Populaires" width="1080" height="1080" loading="lazy" draggable="false">
+                <figcaption><b>Concours National des Initiatives Populaires</b><span>Une idée, un projet, une entreprise, un leader sectoriel.</span></figcaption>
+              </figure>
+            </li>
+            <li class="slide" aria-roledescription="diapositive">
+              <figure>
+                <img src="assets/banniere.jpg" alt="Bannière de la FIP aux couleurs du Gabon : pour une économie plus gabonaise" width="1640" height="924" loading="lazy" draggable="false">
+                <figcaption><b>Pour une économie plus gabonaise</b><span>Le cap de la Fondation, aux couleurs du pays.</span></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="carousel__controls">
+            <button type="button" class="car-btn" id="car-prev" aria-label="Photo précédente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <div class="car-dots" id="car-dots" role="tablist" aria-label="Choisir une photo"></div>
+            <span class="car-count mono" id="car-count" aria-live="polite">01 / 04</span>
+            <button type="button" class="car-btn" id="car-next" aria-label="Photo suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <div class="car-timer" aria-hidden="true"><span id="car-timer"></span></div>
+        </div>
+        <a class="link link--fb reveal" href="https://www.facebook.com/profile.php?id=100083445411702" target="_blank" rel="noopener">
+          Voir toutes les photos sur notre page Facebook →
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ VIDÉO DU DIRECTEUR ============ -->
+    <section class="section" id="video">
+      <div class="container video-wrap">
+        <header class="section__head section__head--center reveal">
+          <span class="eyebrow mono">03 — Le mot du Directeur</span>
+          <h2>Face caméra, la vision de la FIP.</h2>
+          <p class="section__lead">Le Directeur exécutif présente la Fondation, ses priorités et la manière dont chaque Gabonaise et chaque Gabonais peut s'en saisir.</p>
+        </header>
+
+        <div class="player reveal" id="player">
+          <div class="player__frame">
+            <!-- Vidéo : assets/video-directeur.mp4 · aperçu : assets/video-poster.jpg · sous-titres : assets/video-directeur.vtt -->
+            <video id="director-video" preload="metadata" playsinline controls poster="assets/video-poster.jpg" width="1280" height="720">
+              <source src="assets/video-directeur.mp4" type="video/mp4">
+              <track kind="captions" srclang="fr" label="Français" src="assets/video-directeur.vtt" default>
+              Votre navigateur ne lit pas la vidéo.
+            </video>
+            <button class="player__overlay" id="player-overlay" aria-label="Lire le message du Directeur exécutif">
+              <span class="player__btn"><span class="play-ico play-ico--lg"></span></span>
+              <span class="player__meta">
+                <b>Théophile Mbore</b>
+                <span>Directeur exécutif de la FIP</span>
+              </span>
+            </button>
+            <div class="player__empty" id="player-empty" hidden>
+              <span class="mono">Vidéo bientôt disponible</span>
+              <p>Le message du Directeur sera publié ici très prochainement.</p>
+            </div>
+          </div>
+          <div class="player__chapters" role="list" aria-label="Chapitres de la vidéo">
+            <button role="listitem" data-time="0"><span class="mono">00:00</span> Pourquoi la FIP&nbsp;?</button>
+            <button role="listitem" data-time="14"><span class="mono">00:14</span> Notre mission</button>
+            <button role="listitem" data-time="27"><span class="mono">00:27</span> Comment nous rejoindre</button>
+          </div>
+          <p class="player__note">Vidéo réalisée avec un avatar numérique, avec l'accord de M. Théophile Mbore.</p>
+        </div>
+
+        <figure class="quote reveal">
+          <blockquote>«&nbsp;Une réponse efficace aux difficultés rencontrées par les Très Petites Entreprises.&nbsp;»</blockquote>
+          <figcaption><b>Théophile Mbore</b> · Directeur exécutif, au lancement de la FIP (juillet 2022)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ MISSION ============ -->
+    <section class="section section--alt" id="mission">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow mono">04 — Mission</span>
+          <h2>Deux freins identifiés.<br><span class="muted">Une réponse globale.</span></h2>
+          <p class="section__lead">
+            À sa création, la FIP est partie d'un constat simple sur l'entrepreneuriat gabonais&nbsp;:
+            les bonnes idées ne manquent pas, ce sont les leviers pour les faire grandir qui manquent.
+          </p>
+        </header>
+
+        <div class="bento">
+          <article class="card card--problem spot reveal">
+            <span class="tag tag--red mono">Constat 1</span>
+            <h3>Un financement difficile d'accès</h3>
+            <p>Les TPE, PME et PMI peinent à obtenir des financements justes et équitables pour lancer ou développer leurs projets.</p>
+            <div class="viz viz--lock" aria-hidden="true">
+              <svg viewBox="0 0 200 90" preserveAspectRatio="xMinYMid meet"><rect x="10" y="40" width="180" height="10" rx="5" class="v-track"/><rect x="10" y="40" width="46" height="10" rx="5" class="v-fill v-fill--red"/><text x="10" y="28" class="v-lbl">accès au crédit</text></svg>
+            </div>
+          </article>
+
+          <article class="card card--problem spot reveal">
+            <span class="tag tag--red mono">Constat 2</span>
+            <h3>Un réseau trop faible</h3>
+            <p>Sans réseautage fort, les entrepreneurs restent isolés et n'ont pas le poids nécessaire pour un plaidoyer efficace.</p>
+            <div class="viz" aria-hidden="true">
+              <svg viewBox="0 0 200 90" class="v-nodes v-nodes--loose"><circle cx="30" cy="45" r="5"/><circle cx="90" cy="20" r="5"/><circle cx="110" cy="70" r="5"/><circle cx="170" cy="40" r="5"/></svg>
+            </div>
+          </article>
+
+          <article class="card card--answer card--wide spot reveal">
+            <span class="tag tag--green mono">La réponse FIP</span>
+            <h3>Une plateforme qui réunit financement, accompagnement et réseau</h3>
+            <p>La Fondation se présente comme une plateforme qui fait le pari de soutenir la dynamique de l'entrepreneuriat gabonais&nbsp;: promouvoir l'esprit d'entreprise, accompagner les initiatives populaires et bâtir un réseau puissant d'entrepreneurs.</p>
+            <div class="viz viz--net" aria-hidden="true">
+              <svg viewBox="0 0 400 120" class="v-nodes v-nodes--tight">
+                <g class="links">
+                  <line x1="200" y1="60" x2="60" y2="30"/><line x1="200" y1="60" x2="80" y2="95"/><line x1="200" y1="60" x2="140" y2="15"/>
+                  <line x1="200" y1="60" x2="260" y2="15"/><line x1="200" y1="60" x2="330" y2="35"/><line x1="200" y1="60" x2="320" y2="100"/>
+                  <line x1="200" y1="60" x2="200" y2="110"/><line x1="60" y1="30" x2="140" y2="15"/><line x1="260" y1="15" x2="330" y2="35"/>
+                </g>
+                <circle cx="60" cy="30" r="5"/><circle cx="80" cy="95" r="5"/><circle cx="140" cy="15" r="5"/><circle cx="260" cy="15" r="5"/>
+                <circle cx="330" cy="35" r="5"/><circle cx="320" cy="100" r="5"/><circle cx="200" cy="110" r="5"/>
+                <circle cx="200" cy="60" r="12" class="hub"/>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OBJECTIFS ============ -->
+    <section class="section" id="objectifs">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow mono">05 — Objectifs</span>
+          <h2>Faire des entrepreneurs gabonais<br><span class="gradient-text">les capitaines d'industrie de demain.</span></h2>
+        </header>
+
+        <div class="goals">
+          <article class="goal spot reveal" style="--accent: var(--green)">
+            <div class="goal__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.5"/></svg>
+            </div>
+            <span class="goal__num mono">01</span>
+            <h3>Promouvoir l'esprit d'entreprise</h3>
+            <p>Donner envie d'entreprendre, valoriser les réussites locales et rendre l'information accessible à tous, partout au Gabon.</p>
+          </article>
+          <article class="goal spot reveal" style="--accent: var(--yellow)">
+            <div class="goal__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M4 11h16v4a8 8 0 0 1-16 0z"/></svg>
+            </div>
+            <span class="goal__num mono">02</span>
+            <h3>Accompagner les initiatives populaires</h3>
+            <p>Être aux côtés des porteurs de projets, de l'idée à l'activité structurée, avec une solution financière adaptée à leur besoin.</p>
+          </article>
+          <article class="goal spot reveal" style="--accent: var(--blue)">
+            <div class="goal__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l3.5 8.5M17 7.5l-3.5 8.5M7.5 6h9"/></svg>
+            </div>
+            <span class="goal__num mono">03</span>
+            <h3>Bâtir un réseau puissant</h3>
+            <p>Fédérer les entrepreneurs gabonais pour échanger, se renforcer mutuellement et porter une voix commune auprès des décideurs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section class="section section--alt" id="parcours">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow mono">06 — Parcours</span>
+          <h2>De l'idée au réseau,<br><span class="muted">en quatre étapes.</span></h2>
+        </header>
+
+        <div class="steps" id="steps">
+          <div class="steps__rail" aria-hidden="true"><span id="steps-progress"></span></div>
+          <article class="step reveal">
+            <span class="step__num mono">01</span>
+            <div>
+              <h3>Je présente mon initiative</h3>
+              <p>Un formulaire simple, en ligne ou en présentiel à Libreville. Idée naissante ou activité déjà lancée : tout le monde est le bienvenu.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step__num mono">02</span>
+            <div>
+              <h3>On fait le point ensemble</h3>
+              <p>Écoute, diagnostic du projet et des besoins réels : formalisation, gestion, marché, financement.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step__num mono">03</span>
+            <div>
+              <h3>On construit la solution</h3>
+              <p>Accompagnement et recherche d'une solution financière juste, équitable et adaptée à la taille de l'activité.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step__num mono">04</span>
+            <div>
+              <h3>Je rejoins le réseau</h3>
+              <p>Mise en relation avec d'autres entrepreneurs, partenaires et institutions pour grandir et peser ensemble.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHIFFRES ============ -->
+    <section class="section stats-section" aria-label="La FIP en chiffres">
+      <div class="container stats">
+        <div class="stat reveal"><span class="stat__n" data-count="2022">2022</span><span class="stat__l">Année de lancement officiel</span></div>
+        <div class="stat reveal"><span class="stat__n" data-count="3">3</span><span class="stat__l">Profils accompagnés&nbsp;: TPE · PME · PMI</span></div>
+        <div class="stat reveal"><span class="stat__n" data-count="9">9</span><span class="stat__l">Provinces, une ambition nationale</span></div>
+        <div class="stat reveal"><span class="stat__n" data-count="447" data-suffix="+">447+</span><span class="stat__l">Membres de la communauté en ligne</span></div>
+      </div>
+    </section>
+
+    <!-- ============ ÉLIGIBILITÉ (INTERACTIF) ============ -->
+    <section class="section section--alt" id="eligibilite">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <span class="eyebrow mono">07 — Interactif</span>
+          <h2>Et vous, par où commencer&nbsp;?</h2>
+          <p class="section__lead">Trois questions, trente secondes. Découvrez comment la FIP peut vous accompagner.</p>
+        </header>
+
+        <div class="quiz reveal" id="quiz">
+          <div class="quiz__progress" aria-hidden="true"><span id="quiz-bar"></span></div>
+
+          <fieldset class="quiz__step is-active" data-q="profil">
+            <legend>1. Où en êtes-vous&nbsp;?</legend>
+            <div class="choices">
+              <button type="button" data-v="idee">💡 J'ai une idée</button>
+              <button type="button" data-v="tpe">🛒 Je gère une très petite entreprise</button>
+              <button type="button" data-v="pme">🏢 Je dirige une PME</button>
+              <button type="button" data-v="pmi">🏭 Je dirige une PMI</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="quiz__step" data-q="besoin">
+            <legend>2. De quoi avez-vous le plus besoin&nbsp;?</legend>
+            <div class="choices">
+              <button type="button" data-v="financement">💰 Un financement</button>
+              <button type="button" data-v="accompagnement">🧭 Être accompagné·e</button>
+              <button type="button" data-v="reseau">🤝 Un réseau, des contacts</button>
+              <button type="button" data-v="formalisation">📄 Formaliser mon activité</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="quiz__step" data-q="lieu">
+            <legend>3. Où se situe votre activité&nbsp;?</legend>
+            <div class="choices choices--grid">
+              <button type="button" data-v="Estuaire">Estuaire</button>
+              <button type="button" data-v="Haut-Ogooué">Haut-Ogooué</button>
+              <button type="button" data-v="Moyen-Ogooué">Moyen-Ogooué</button>
+              <button type="button" data-v="Ngounié">Ngounié</button>
+              <button type="button" data-v="Nyanga">Nyanga</button>
+              <button type="button" data-v="Ogooué-Ivindo">Ogooué-Ivindo</button>
+              <button type="button" data-v="Ogooué-Lolo">Ogooué-Lolo</button>
+              <button type="button" data-v="Ogooué-Maritime">Ogooué-Maritime</button>
+              <button type="button" data-v="Woleu-Ntem">Woleu-Ntem</button>
+            </div>
+          </fieldset>
+
+          <div class="quiz__result" id="quiz-result" hidden aria-live="polite">
+            <span class="tag tag--green mono">Votre parcours FIP</span>
+            <h3 id="result-title"></h3>
+            <p id="result-text"></p>
+            <ul class="result-steps" id="result-steps"></ul>
+            <div class="quiz__actions">
+              <a href="#contact" class="btn btn--light" id="result-cta">Je soumets mon initiative →</a>
+              <button type="button" class="btn btn--ghost" id="quiz-reset">Recommencer</button>
+            </div>
+          </div>
+          <button type="button" class="quiz__back" id="quiz-back" hidden>← Question précédente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <span class="eyebrow mono">08 — Contact</span>
+          <h2>Parlons de votre<br><span class="gradient-text">initiative.</span></h2>
+          <p class="section__lead">Une question, un projet, une envie de devenir partenaire&nbsp;? Écrivez-nous, l'équipe vous répond.</p>
+          <ul class="contact__list">
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><small class="mono">Adresse</small><span>Libreville, Gabon</span></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+              <div><small class="mono">Téléphone</small><a href="tel:+24174434325">+241 74 43 43 25</a></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <div><small class="mono">E-mail</small><a href="mailto:fondation@fip-gabon.org">fondation@fip-gabon.org</a></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h2.5l.5-4h-3V7a1 1 0 0 1 1-1h2z"/></svg></span>
+              <div><small class="mono">Facebook</small><a href="https://www.facebook.com/profile.php?id=100083445411702" target="_blank" rel="noopener">Fondation pour les Initiatives Populaires</a></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></span>
+              <div><small class="mono">Instagram</small><a href="https://www.instagram.com/fondation.initiative.gabon/" target="_blank" rel="noopener">@fondation.initiative.gabon</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="form__row">
+            <label>Nom complet<input name="nom" autocomplete="name" required></label>
+            <label>Téléphone<input name="tel" type="tel" autocomplete="tel" inputmode="tel"></label>
+          </div>
+          <label>E-mail<input name="email" type="email" autocomplete="email" required></label>
+          <label>Je suis
+            <select name="profil">
+              <option>Porteur·se d'une idée</option>
+              <option>Dirigeant·e d'une TPE</option>
+              <option>Dirigeant·e d'une PME</option>
+              <option>Dirigeant·e d'une PMI</option>
+              <option>Partenaire / institution</option>
+              <option>Autre</option>
+            </select>
+          </label>
+          <label>Mon initiative en quelques mots<textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn--light btn--full" type="submit">Envoyer ma demande →</button>
+          <p class="form__note" id="form-note" aria-live="polite">Votre messagerie s'ouvrira avec le message prêt à envoyer à fondation@fip-gabon.org.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-officiel.jpg" alt="Logo de la Fondation pour les Initiatives Populaires" width="64" height="64">
+        <p><b>Fondation pour les Initiatives Populaires</b><br>Organisation à but non lucratif · Libreville, Gabon</p>
+        <p class="footer__slogan gradient-text">Pour une économie plus gabonaise.</p>
+      </div>
+      <nav aria-label="Liens du pied de page">
+        <h4 class="mono">La Fondation</h4>
+        <a href="#mission">Mission</a><a href="#objectifs">Objectifs</a><a href="#realisations">Réalisations</a>
+      </nav>
+      <nav aria-label="Agir">
+        <h4 class="mono">Agir</h4>
+        <a href="#eligibilite">Suis-je éligible ?</a><a href="#contact">Soumettre un projet</a><a href="#contact">Devenir partenaire</a>
+      </nav>
+      <nav aria-label="Suivre la FIP">
+        <h4 class="mono">Suivre</h4>
+        <a href="https://www.facebook.com/profile.php?id=100083445411702" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/fondation.initiative.gabon/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#concours">Rise Up Gabon</a>
+        <a href="mailto:fondation@fip-gabon.org">E-mail</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span class="mono">© <span id="year">2026</span> FIP — Tous droits réservés</span>
+      <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
